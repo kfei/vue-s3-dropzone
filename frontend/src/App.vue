@@ -1,33 +1,21 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <dropzone></dropzone>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Dropzone from './components/Dropzone'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    Dropzone
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
-
 <style lang="stylus">
 body
-  background-color black
+  font-family 'Open Sans', sans-serif
 </style>
