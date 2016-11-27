@@ -30,8 +30,14 @@ yarn install
 npm run dev
 ```
 
-Please make sure you have correct priviledge/policy/CORS settings on AWS. Feel
+Please make sure you have correct privilege/policy/CORS settings on AWS. Feel
 free to open an issue if you happened to be trapped by that. :cry:
+
+## Architecture
+
+You can have a look at the [architecture explanation](https://milkr.io/kfei/Explanation-of-vue-s3-dropzone) on Milkr.
+
+[![demo-pic](https://i.imgur.com/UHpZgy1.png)](https://milkr.io/kfei/Explanation-of-vue-s3-dropzone)
 
 ## License
 
