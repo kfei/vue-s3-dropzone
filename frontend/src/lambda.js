@@ -14,7 +14,7 @@ export default {
       })
       .catch((err) => {
         console.error(err)
-        return Promise.resolve('/')
+        return Promise.reject('/')
       })
   }
 }
