@@ -50,6 +50,10 @@ export default {
       // We're going to process each file manually (see `accept` below)
       autoProcessQueue: false,
 
+      // Comma separated mime types or file extensions to accept
+      // see: http://www.dropzonejs.com/#config-acceptedFiles
+      acceptedFiles: null,
+
       // Here we request a signed upload URL when a file being accepted
       accept (file, done) {
         lambda.getSignedURL(file)
