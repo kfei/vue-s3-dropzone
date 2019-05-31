@@ -39,7 +39,6 @@ exports.handler = async (event) => {
         err: err
       })
     }
-    console.log(response);
     return response;
 
     function _getUrl(params){
