@@ -1,7 +1,7 @@
 ## Quickstart
 
   1. create a blank AWS Lambda function
-  2. choose Node 4.3 runtime
+  2. choose Node 10.x or 4.3 runtime (If using 4.3 runtime, use GetSignedURLv4.js)
   3. paste the code in `GetSignedURL.js` to the Lambda function code
   4. add an env variable `AWS_BUCKET_NAME` with value equals to your S3 bucket
      name
