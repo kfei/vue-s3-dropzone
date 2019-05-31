@@ -3,30 +3,37 @@ var s3 = new AWS.S3();
 var bucketName = process.env.AWS_BUCKET_NAME
 
 exports.handler = async (event) => {
+  let payload = {};
+    if(event.body){
+      payload = JSON.parse(event.body);
+    }
     const params = {
         Bucket: bucketName,
-        Key: event.filePath,
+        Key: payload.filePath,
         Expires: 3600,
-        ContentType: event.contentType
+        ContentType: payload.contentType
     }
     const response = {
       statusCode: 200,
       headers: {
         "Access-Control-Allow-Origin" : "*",
         "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Headers": 'content-type',
       },
       body: {},
     }
-    if (!event.hasOwnProperty('contentType')) {
+    if (!payload.hasOwnProperty('contentType')) {
       response.body = JSON.stringify({
         err: 'Missing contentType'
       })
+      return response;
     }
 
-    if (!event.hasOwnProperty('filePath')) {
+    if (!payload.hasOwnProperty('filePath')) {
       response.body = JSON.stringify({
         err: 'Missing filePath'
       })
+      return response;
     }
 
     try{
